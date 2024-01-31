@@ -1,14 +1,14 @@
 import Breadcrumb from '../components/Breadcrumb';
-import TableThree from '../components/TableThree';
+// import TableThree from '../components/TableThree';
 
 const Tables = () => {
   return (
     <>
       <Breadcrumb pageName="Tables" />
 
-      <div className="flex flex-col gap-10">
+      {/* <div className="flex flex-col gap-10">
         <TableThree />
-      </div>
+      </div> */}
     </>
   );
 };
