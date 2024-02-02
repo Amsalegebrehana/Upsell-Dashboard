@@ -31,8 +31,9 @@ export function UpsellRequest() {
       to follow my dreams and inspire other people to follow their dreams, too.`,
     }
   ];
+  
   return (
-    <Tabs style={{marginTop: "30px"}}>
+    <Tabs value="dashboard" style={{marginTop: "30px"}}>
       <TabsHeader className="ml-3 mr-3">
         <Tab value="dashboard">
           <div className="flex items-center gap-2">
