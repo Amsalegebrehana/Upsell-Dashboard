@@ -1,3 +1,4 @@
+import { Checkbox } from "@material-tailwind/react";
 
 const TableOne = () => {
   return (
@@ -7,7 +8,10 @@ const TableOne = () => {
           <thead>
             <tr className="bg-gray-2 text-left dark:bg-meta-4">
               <th className="min-w-[220px] py-4 px-4 font-medium text-black dark:text-white xl:pl-11">
-                Title
+                <div  className="flex items-center">
+                <Checkbox defaultChecked/>
+                <span>Title</span>
+                </div>
               </th>
               <th className="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
                 Price
@@ -33,25 +37,27 @@ const TableOne = () => {
             <tr>
               <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
                 <h5 className="font-medium text-black dark:text-white">
-                  Free Package
+                  <div className="flex items-center">
+                    <Checkbox color="green" defaultChecked/>
+                    <span>Pool Heating</span>
+                  </div>
                 </h5>
-                <p className="text-sm">$0.00</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">Jan 13,2023</p>
+                <p className="text-black dark:text-white">100</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="inline-flex rounded-full bg-success bg-opacity-10 py-1 px-3 text-sm font-medium text-success">
-                  Paid
+                <p className="inline-flex text-black rounded-full bg-opacity-10 py-1 px-3 font">
+                  Per Booking - Onetime
                 </p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="font-medium text-black dark:text-white">
+                <p className="font text-black dark:text-white">
                   Always
                 </p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="font-medium text-black dark:text-white">
+                <p className="font text-black dark:text-white">
                   9/20
                 </p>
               </td>
@@ -132,31 +138,31 @@ const TableOne = () => {
             </tr>
             <tr>
               <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
-                <h5 className="font-medium text-black dark:text-white">
-                  Standard Package
-                </h5>
-                <p className="text-sm">$59.00</p>
+                  <div className="flex items-center">
+                    <Checkbox color="green" defaultChecked/>
+                    <h5 className="font-medium text-black dark:text-white">Trip Protection</h5>
+                  </div>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">Jan 13,2023</p>
+                <p className="text-black dark:text-white">Tiered Pricing</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="inline-flex rounded-full bg-success bg-opacity-10 py-1 px-3 text-sm font-medium text-success">
-                  Paid
+                <p className="inline-flex text-black rounded-full bg-opacity-10 py-1 px-3 font">
+                  Per Booking - Tiered
                 </p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="font-medium text-black dark:text-white">
+                <p className="font text-black dark:text-white">
                   Always
                 </p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="font-medium text-black dark:text-white">
-                  9/20
+                <p className="font text-black dark:text-white">
+                  19/20
                 </p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="inline-flex rounded-full bg-success bg-opacity-10 py-1 px-3 text-sm font-medium text-success">
+                <p className="inline-flex rounded-full bg-success bg-opacity-10 py-1 px-3 text-sm font text-success">
                   Online
                 </p>
               </td>
@@ -232,32 +238,34 @@ const TableOne = () => {
             </tr>
             <tr>
               <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-11">
-                <h5 className="font-medium text-black dark:text-white">
-                  Business Package
-                </h5>
-                <p className="text-sm">$99.00</p>
+                  <div className="flex items-center">
+                    <Checkbox color="green" defaultChecked/>
+                    <h5 className="font-medium text-black dark:text-white">
+                      Early Check-in
+                    </h5>
+                  </div>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">Jan 13,2023</p>
+                <p className="text-black dark:text-white">150</p>
+              </td>
+              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                <p className="inline-flex text-black rounded-full bg-opacity-10 py-1 px-3 font">
+                  Per Booking - Onetime
+                </p>
+              </td>
+              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                <p className="font text-black dark:text-white">
+                  Always
+                </p>
+              </td>
+              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                <p className="font text-black dark:text-white">
+                  16/20
+                </p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                 <p className="inline-flex rounded-full bg-danger bg-opacity-10 py-1 px-3 text-sm font-medium text-danger">
-                  Unpaid
-                </p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="font-medium text-black dark:text-white">
-                  Always
-                </p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="font-medium text-black dark:text-white">
-                  9/20
-                </p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="inline-flex rounded-full bg-success bg-opacity-10 py-1 px-3 text-sm font-medium text-success">
-                  Online
+                  Offline
                 </p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
@@ -332,32 +340,34 @@ const TableOne = () => {
             </tr>
             <tr>
               <td className="py-5 px-4 pl-9 xl:pl-11">
-                <h5 className="font-medium text-black dark:text-white">
-                  Standard Package
-                </h5>
-                <p className="text-sm">$59.00</p>
+                  <div className="flex items-center">
+                    <Checkbox color="green" defaultChecked/>
+                    <h5 className="font-medium text-black dark:text-white">
+                      Early Check-in
+                    </h5>
+                  </div>
               </td>
               <td className="py-5 px-4">
-                <p className="text-black dark:text-white">Jan 13,2023</p>
+                <p className="text-black dark:text-white">250</p>
               </td>
               <td className="py-5 px-4">
-                <p className="inline-flex rounded-full bg-warning bg-opacity-10 py-1 px-3 text-sm font-medium text-warning">
-                  Pending
+                <p className="inline-flex text-black rounded-full bg-opacity-10 py-1 px-3 font">
+                  Per Booking - Onetime
                 </p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="font-medium text-black dark:text-white">
+                <p className="font text-black dark:text-white">
                   Always
                 </p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="font-medium text-black dark:text-white">
-                  9/20
+                <p className="font text-black dark:text-white">
+                  2/20
                 </p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="inline-flex rounded-full bg-success bg-opacity-10 py-1 px-3 text-sm font-medium text-success">
-                  Online
+                <p className="inline-flex rounded-full bg-danger bg-opacity-10 py-1 px-3 text-sm font-medium text-danger">
+                  Offline
                 </p>
               </td>
               <td className="py-5 px-4">
