@@ -1,3 +1,5 @@
+import PendingRequests from "./PendingRequests";
+import DeclinedRequests from "./DeclinedRequests";
 import {
   Tabs,
   TabsHeader,
@@ -10,27 +12,8 @@ import {
   XCircleIcon,
   CheckCircleIcon
 } from "@heroicons/react/24/solid";
-import TableThree from "./TableThree";
-import TableThreeDeclined from "./TableThreeDeclined";
 
 export function UpsellRequest() {
-  const data = [
-    {
-      label: "Pending",
-      value: "dashboard",
-      icon: CheckCircleIcon,
-      desc: `It really matters and then like it really doesn't matter.
-      What matters is the people who are sparked by it. And the people
-      who are like offended by it, it doesn't matter.`,
-    },
-    {
-      label: "Declined",
-      value: "profile",
-      icon: XCircleIcon,
-      desc: `Because it's about motivating the doers. Because I'm here
-      to follow my dreams and inspire other people to follow their dreams, too.`,
-    }
-  ];
   
   return (
     <Tabs value="dashboard" style={{marginTop: "30px"}}>
@@ -50,10 +33,10 @@ export function UpsellRequest() {
       </TabsHeader>
       <TabsBody>
         <TabPanel value="dashboard">
-          <TableThree />
+          <PendingRequests />
         </TabPanel>
         <TabPanel value="profile">
-          <TableThreeDeclined/>
+          <DeclinedRequests/>
         </TabPanel>
       </TabsBody>
     </Tabs>

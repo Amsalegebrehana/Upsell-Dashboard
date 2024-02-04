@@ -1,18 +1,22 @@
-const TableTwo = () => {
+import { Checkbox } from "@material-tailwind/react";
+const PendingRequests = () => {
   return (
     <div className="rounded-sm border border-stroke bg-white px-5 pt-6 pb-2.5 shadow-default dark:border-strokedark dark:bg-boxdark sm:px-7.5 xl:pb-1">
       <div className="max-w-full overflow-x-auto">
-        <table className="w-full table-auto text-sm overflow-hidden">
+        <table className="w-full table-auto">
           <thead>
             <tr className="bg-gray-2 text-left dark:bg-meta-4">
-              <th className="min-w-[50px] py-4 px-4 font-medium text-black dark:text-white xl:pl-7">
-                ID
+              <th className="min-w-[50px] py-4 px-4 font-medium text-black dark:text-white xl:pl-5">
+                <div  className="flex items-center">
+                <Checkbox defaultChecked/>
+                <span>ID</span>
+                </div>
               </th>
-              <th className="min-w-[130px] py-4 px-4 font-medium text-black dark:text-white">
+              <th className="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white">
+                Booking#
+              </th>
+              <th className="min-w-[150px] py-4 px-4 font-medium text-black dark:text-white">
                 Purchase Date
-              </th>
-              <th className="min-w-[100px] py-4 px-4 font-medium text-black dark:text-white">
-                Booking
               </th>
               <th className="min-w-[120px] py-4 px-2 font-medium text-black dark:text-white">
                 <div className="inline-flex">
@@ -26,13 +30,10 @@ const TableTwo = () => {
                 Check-Out
               </th>
               <th className="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white">
-                Upsell
-              </th>
-              <th className="min-w-[130px] py-4 px-4 font-medium text-black dark:text-white">
-                Guest Name
+                Property
               </th>
               <th className="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white">
-                Property
+                Upsell
               </th>
               <th className="min-w-[120px] py-4 px-4 font-medium text-black dark:text-white">
                 Amount
@@ -44,14 +45,17 @@ const TableTwo = () => {
           </thead>
           <tbody>
             <tr>
-              <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-7">
-                <p className="text-black dark:text-white">42603</p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">Dec 13, 2023</p>
+              <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-5">
+                <div  className="flex items-center">
+                  <Checkbox defaultChecked/>
+                  <p className="text-black dark:text-white">42603</p>
+                </div>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                 <p className="text-black dark:text-white">78542421</p>
+              </td>
+              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                <p className="text-black dark:text-white">Dec 13, 2023</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
               <p className="text-black dark:text-white">Dec 15, 2023</p>
@@ -60,16 +64,13 @@ const TableTwo = () => {
               <p className="text-black dark:text-white">Dec 19, 2023</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                <p className="text-black dark:text-white">#1 Rated Mansion</p>
+              </td>
+              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                 <h5 className="font-medium text-black dark:text-white">
                   Pool Heating
                 </h5>
                 <p className="text-sm">Qty: 1</p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">Aaron Marshal</p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">#1 Rated Mansion</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                 <p className="inline-flex rounded-full bg-success bg-opacity-10 py-1 px-3 text-sm font-medium text-success">
@@ -147,14 +148,17 @@ const TableTwo = () => {
               </td>
             </tr>
             <tr>
-              <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-7">
-                <p className="text-black dark:text-white">42603</p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">Dec 13, 2023</p>
+              <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-5">
+                <div  className="flex items-center">
+                  <Checkbox defaultChecked/>
+                  <p className="text-black dark:text-white">42603</p>
+                </div>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                 <p className="text-black dark:text-white">78542421</p>
+              </td>
+              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                <p className="text-black dark:text-white">Dec 13, 2023</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
               <p className="text-black dark:text-white">Dec 15, 2023</p>
@@ -163,16 +167,13 @@ const TableTwo = () => {
               <p className="text-black dark:text-white">Dec 19, 2023</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                <p className="text-black dark:text-white">#1 Rated Mansion</p>
+              </td>
+              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                 <h5 className="font-medium text-black dark:text-white">
                   Pool Heating
                 </h5>
                 <p className="text-sm">Qty: 1</p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">Aaron Marshal</p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">#1 Rated Mansion</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                 <p className="inline-flex rounded-full bg-success bg-opacity-10 py-1 px-3 text-sm font-medium text-success">
@@ -250,14 +251,17 @@ const TableTwo = () => {
               </td>
             </tr>
             <tr>
-              <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-7">
-                <p className="text-black dark:text-white">42603</p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">Dec 13, 2023</p>
+              <td className="border-b border-[#eee] py-5 px-4 pl-9 dark:border-strokedark xl:pl-5">
+                <div  className="flex items-center">
+                  <Checkbox defaultChecked/>
+                  <p className="text-black dark:text-white">42603</p>
+                </div>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                 <p className="text-black dark:text-white">78542421</p>
+              </td>
+              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                <p className="text-black dark:text-white">Dec 13, 2023</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
               <p className="text-black dark:text-white">Dec 15, 2023</p>
@@ -266,16 +270,13 @@ const TableTwo = () => {
               <p className="text-black dark:text-white">Dec 19, 2023</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
+                <p className="text-black dark:text-white">#1 Rated Mansion</p>
+              </td>
+              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                 <h5 className="font-medium text-black dark:text-white">
                   Pool Heating
                 </h5>
                 <p className="text-sm">Qty: 1</p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">Aaron Marshal</p>
-              </td>
-              <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
-                <p className="text-black dark:text-white">#1 Rated Mansion</p>
               </td>
               <td className="border-b border-[#eee] py-5 px-4 dark:border-strokedark">
                 <p className="inline-flex rounded-full bg-danger bg-opacity-10 py-1 px-3 text-sm font-medium text-danger">
@@ -359,4 +360,4 @@ const TableTwo = () => {
   );
 };
 
-export default TableTwo;
+export default PendingRequests;
