@@ -241,7 +241,7 @@ import {Typography} from "@material-tailwind/react";
                     <div className="">
 
                         {showSettings &&
-                            <div className="relative w-full bg-white px-6 pt-10 pb-8 shadow-xl sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
+                            <div className="relative w-full bg-white px-6 pt-10 pb-8 mb-5 shadow-xl sm:mx-auto sm:max-w-2xl sm:rounded-lg sm:px-10">
                                 <div className="mx-auto px-5">
                                     <div className="mx-auto mt-2 grid max-w-xl divide-y divide-neutral-200">
                                         <div className="py-5">
