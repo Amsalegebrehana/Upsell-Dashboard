@@ -24,20 +24,15 @@ const Main = ({  }: MainProps) => {
           <div className="flex">
             <SearchComponent/>
             <FilterComponent/>
-            {selectedTab !== "manage" && (
               <ExportButton/>
-            )}
           </div>
-
-          {selectedTab === "manage" && (
-             <CreateButton setShowModal={setShowModal}/>
-          )}
+            <CreateButton setShowModal={setShowModal}/>
 
           {showModal && <UpsellModal setShowModal={setShowModal} />}
         </div>
       
         <div style={{marginTop: "50px"}}> 
-          <UpsellTabs selectedTab={selectedTab} handleTabChange={handleTabChange}/>
+          <UpsellTabs selectedTab={selectedTab} setSelectedTab = {setSelectedTab} handleTabChange={handleTabChange}/>
         </div>
     </div>
     </>

@@ -13,11 +13,11 @@ import {
   CheckCircleIcon
 } from "@heroicons/react/24/solid";
 
-export function UpsellRequest() {
+export function UpsellRequest({selectedTab, setSelectedTab} : {selectedTab: string, setSelectedTab: (value: string) => void}) {
   
   return (
     <Tabs value="dashboard" style={{marginTop: "30px"}}>
-      <TabsHeader className="ml-3 mr-3">
+      <TabsHeader className="ml-3 mr-3 !dark:text-black">
         <Tab value="dashboard">
           <div className="flex items-center gap-2">
             <CheckCircleIcon className="w-5 h-5" />
@@ -33,10 +33,10 @@ export function UpsellRequest() {
       </TabsHeader>
       <TabsBody>
         <TabPanel value="dashboard">
-          <PendingRequests />
+          <PendingRequests setSelectedTab={setSelectedTab} selectedTab={selectedTab}/>
         </TabPanel>
         <TabPanel value="profile">
-          <DeclinedRequests/>
+          <DeclinedRequests setSelectedTab={setSelectedTab} selectedTab={selectedTab}/>
         </TabPanel>
       </TabsBody>
     </Tabs>

@@ -8,7 +8,7 @@ import {Typography} from "@material-tailwind/react";
     }
     return (
         <>
-          <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark">
+          <div className="rounded-sm border border-stroke bg-white shadow-default dark:border-strokedark dark:bg-boxdark dark:text-white">
             <div className="flex flex-wrap">
               <div style={{flex:1}} className="hidden w-full mt-40 xl:block xl:w-1/2">
                 <div className="py-17.5 px-26 text-center">
@@ -140,7 +140,7 @@ import {Typography} from "@material-tailwind/react";
                 </div>
               </div>
     
-              <div style={{flex:2}} className="flex flex-col gap-6 ml-30 mt-22 mr-55">
+              <div style={{flex:2}} className="flex flex-col gap-6 ml-30 mt-22 mr-55 dark:text-white">
                     <div className="flex w-full gap-6">
                         <label htmlFor="dropzone-file" className="flex flex-col items-center justify-center w-60 h-30 border-2 border-gray-300 border-dashed rounded-lg cursor-pointer bg-gray-50 dark:hover:bg-bray-800 dark:bg-gray-700 hover:bg-gray-100 dark:border-gray-600 dark:hover:border-gray-500 dark:hover:bg-gray-600">
                             <div className="flex flex-col items-center justify-center pt-5 pb-6">
@@ -153,7 +153,7 @@ import {Typography} from "@material-tailwind/react";
                             <input id="dropzone-file" type="file" className="hidden" />
                         </label>
                         <div>
-                            <h1 className="text-lg font-bold text-black">Product Image</h1>
+                            <h1 className="text-lg font-bold text-black dark:text-white">Product Image</h1>
                             <p className="text-sm">Only image files are allowed</p>
                             <button className=" hover:bg-blue-500 text-blue-700 font-semibold hover:text-gray-800 py-1 px-4 mt-2 border border-blue-500 rounded-full">
                                 <div className="inline-flex w-20 h-5">
@@ -162,8 +162,8 @@ import {Typography} from "@material-tailwind/react";
                             </button>
                         </div>
                     </div> 
-                    <div>
-                        <Typography variant="h6" color="blue-gray" className="font-bold text-black">
+                    <div className="dark:text-white">
+                        <Typography variant="h6" color="blue-gray" className="font-bold text-black dark:text-white">
                             Title
                         </Typography>
                         <input
@@ -172,7 +172,7 @@ import {Typography} from "@material-tailwind/react";
                         />
                     </div>
                     <div className="mt-3">
-                        <Typography variant="h6" color="blue-gray" className="font-bold text-black">
+                        <Typography variant="h6" color="blue-gray" className="font-bold text-black dark:text-white">
                             Short Description
                         </Typography>
                         <input
@@ -180,7 +180,7 @@ import {Typography} from "@material-tailwind/react";
                         />
                     </div>
                     <div className="mt-3">
-                        <Typography variant="h6" color="blue-gray" className="-mb-3 font-bold text-black">
+                        <Typography variant="h6" color="blue-gray" className="-mb-3 font-bold text-black dark:text-white">
                             Pricing Model
                         </Typography>
                         <select className="w-full h-10 border-t-blue-gray-200 focus:border-t-gray-900 bg-transparent border rounded" style={{ marginBottom: "20px", marginTop:"20px" }}>
@@ -191,7 +191,7 @@ import {Typography} from "@material-tailwind/react";
                     </div>
                     <div className="flex gap-2" style={{ marginBottom: "20px" }}>
                         <div style={{ flex: 1 }}>
-                        <Typography variant="h6" color="blue-gray" className="-mb-3 font-bold text-black">
+                        <Typography variant="h6" color="blue-gray" className="-mb-3 font-bold text-black dark:text-white" >
                             Price
                         </Typography>
                         <select className="w-full h-7 border-t-blue-gray-200 mt-4 bg-transparent border rounded">
@@ -201,7 +201,7 @@ import {Typography} from "@material-tailwind/react";
                         </select>
                         </div>
                         <div style={{ flex: 1 }}>
-                        <Typography variant="h6" color="blue-gray" className="-mb-3 font-bold text-black">
+                        <Typography variant="h6" color="blue-gray" className="-mb-3 font-bold text-black dark:text-white">
                             Per
                         </Typography>
                         <select className="w-full h-7 border-t-blue-gray-200 mt-4 bg-transparent border rounded">
@@ -211,7 +211,7 @@ import {Typography} from "@material-tailwind/react";
                         </select>
                         </div>
                         <div style={{ flex: 1 }}>
-                        <Typography variant="h6" color="blue-gray" className="-mb-3 font-bold text-black">
+                        <Typography variant="h6" color="blue-gray" className="-mb-3 font-bold text-black dark:text-white">
                             Period
                         </Typography>
                         <select className="w-full h-7 border-t-blue-gray-200 mt-4 bg-transparent border rounded">
@@ -234,7 +234,7 @@ import {Typography} from "@material-tailwind/react";
                                     <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
                                 </svg>                              
                             }
-                            <span className="uppercase font-bold text-black">More Settings</span>
+                            <span className="uppercase font-bold text-black dark:text-white">More Settings</span>
                             </div>
                         </button>
                     </div>
@@ -249,9 +249,9 @@ import {Typography} from "@material-tailwind/react";
                                                 <summary className="flex cursor-pointer list-none items-center justify-between">
                                                     <div className="flex flex-col">
                                                         <span className="font-medium text-black">Is your approval required?</span>
-                                                        <p className="text-sm"> No approval needed</p>
+                                                        <p className="text-sm dark:text-black"> No approval needed</p>
                                                     </div>
-                                                    <span className="transition group-open:rotate-180">
+                                                    <span className="transition group-open:rotate-180 dark:text-black">
                                                             <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                                                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                                 stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -259,7 +259,7 @@ import {Typography} from "@material-tailwind/react";
                                                             </svg>
                                                         </span>
                                                 </summary>
-                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">Springerdata offers a variety of
+                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600 dark:text-black">Springerdata offers a variety of
                                                     billing options, including monthly and annual subscription plans, as well as pay-as-you-go
                                                     pricing for certain services. Payment is typically made through a credit card or other
                                                     secure online payment method.
@@ -271,9 +271,9 @@ import {Typography} from "@material-tailwind/react";
                                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                                     <div className="flex flex-col">
                                                         <span className="font-medium text-black"> Is this upsell mandatory?</span>
-                                                        <p className="text-sm"> No, it's optional</p>
+                                                        <p className="text-sm dark:text-black"> No, it's optional</p>
                                                     </div>
-                                                    <span className="transition group-open:rotate-180">
+                                                    <span className="transition group-open:rotate-180 dark:text-black">
                                                             <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                                                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                                 stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -281,7 +281,7 @@ import {Typography} from "@material-tailwind/react";
                                                             </svg>
                                                         </span>
                                                 </summary>
-                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We offer a 30-day money-back
+                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600 dark:text-black">We offer a 30-day money-back
                                                     guarantee for most of its subscription plans. If you are not satisfied with your
                                                     subscription within the first 30 days, you can request a full refund. Refunds for
                                                     subscriptions that have been active for longer than 30 days may be considered on a
@@ -292,8 +292,8 @@ import {Typography} from "@material-tailwind/react";
                                         <div className="py-5">
                                             <details className="group">
                                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
-                                                    <span className="text-black"> Additional Fees & Terms</span>
-                                                    <span className="transition group-open:rotate-180">
+                                                    <span className="text-black dark:text-black"> Additional Fees & Terms</span>
+                                                    <span className="transition group-open:rotate-180 dark:text-black">
                                                             <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                                                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                                 stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -301,7 +301,7 @@ import {Typography} from "@material-tailwind/react";
                                                             </svg>
                                                         </span>
                                                 </summary>
-                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">To cancel your subscription, you can
+                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600 dark:text-black">To cancel your subscription, you can
                                                     log in to your account and navigate to the subscription management page. From there, you
                                                     should be able to cancel your subscription and stop future billing.
                                                 </p>
@@ -311,7 +311,7 @@ import {Typography} from "@material-tailwind/react";
                                             <details className="group">
                                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                                     <span className="text-black"> Is there a free trial?</span>
-                                                    <span className="transition group-open:rotate-180">
+                                                    <span className="transition group-open:rotate-180 dark:text-black">
                                                             <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                                                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                                 stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -319,7 +319,7 @@ import {Typography} from "@material-tailwind/react";
                                                             </svg>
                                                         </span>
                                                 </summary>
-                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We offer a free trial of our software
+                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600 dark:text-black">We offer a free trial of our software
                                                     for a limited time. During the trial period, you will have access to a limited set of
                                                     features and functionality, but you will not be charged.
                                                 </p>
@@ -329,7 +329,7 @@ import {Typography} from "@material-tailwind/react";
                                             <details className="group">
                                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                                     <span className="text-black"> How do I contact support?</span>
-                                                    <span className="transition group-open:rotate-180">
+                                                    <span className="transition group-open:rotate-180 dark:text-black">
                                                             <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                                                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                                 stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -337,7 +337,7 @@ import {Typography} from "@material-tailwind/react";
                                                             </svg>
                                                         </span>
                                                 </summary>
-                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">If you need help with our platform or
+                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600 dark:text-black">If you need help with our platform or
                                                     have any other questions, you can contact the company's support team by submitting a support
                                                     request through the website or by emailing support@ourwebsite.com.
                                                 </p>
@@ -347,7 +347,7 @@ import {Typography} from "@material-tailwind/react";
                                             <details className="group">
                                                 <summary className="flex cursor-pointer list-none items-center justify-between font-medium">
                                                     <span className="text-black"> Do you offer any discounts or promotions?</span>
-                                                    <span className="transition group-open:rotate-180">
+                                                    <span className="transition group-open:rotate-180 dark:text-black ">
                                                             <svg fill="none" height="24" shape-rendering="geometricPrecision"
                                                                 stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                                                 stroke-width="1.5" viewBox="0 0 24 24" width="24">
@@ -355,7 +355,7 @@ import {Typography} from "@material-tailwind/react";
                                                             </svg>
                                                         </span>
                                                 </summary>
-                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600">We may offer discounts or promotions
+                                                <p className="group-open:animate-fadeIn mt-3 text-neutral-600 dark:text-black">We may offer discounts or promotions
                                                     from time to time. To stay up-to-date on the latest deals and special offers, you can sign
                                                     up for the company's newsletter or follow it on social media.
                                                 </p>

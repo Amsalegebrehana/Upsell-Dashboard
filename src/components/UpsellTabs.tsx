@@ -15,7 +15,7 @@ import {
   CheckCircleIcon
 } from "@heroicons/react/24/solid";
 
-const UpsellTabs = ({ selectedTab, handleTabChange }: { selectedTab: string, handleTabChange: (value: string) => void }) => {
+const UpsellTabs = ({ selectedTab, handleTabChange, setSelectedTab }: { selectedTab: string, handleTabChange: (value: string) => void, setSelectedTab: (value: string) => void }) => {
     const onTabChange = (value: string) => {
       handleTabChange(value);
     };
@@ -26,31 +26,31 @@ const UpsellTabs = ({ selectedTab, handleTabChange }: { selectedTab: string, han
           <Tab value="manage" onClick={() => onTabChange("manage")}>
             <div className="flex items-center gap-2">
               <Square3Stack3DIcon className="w-5 h-5" />
-              Manage Upsells
+              <span className="">Manage Upsells</span>
             </div>
           </Tab>
           <Tab value="order" onClick={() => onTabChange("order")}>
             <div className="flex items-center gap-2">
               <ShoppingCartIcon className="w-5 h-5" />
-              Upsell Orders
+              <span>Upsell Orders</span>
             </div>
           </Tab>
           <Tab value="request" onClick={() => onTabChange("request")}>
             <div className="flex items-center gap-2">
               <CheckCircleIcon className="w-5 h-5" />
-              Upsell Requests
+              <span>Upsell Requests</span>
             </div>
           </Tab>
         </TabsHeader>
         <TabsBody>
           <TabPanel value="manage">
-            <ManageUpsell />
+            <ManageUpsell setSelectedTab={setSelectedTab} selectedTab={selectedTab} />
           </TabPanel>
           <TabPanel value="order">
             <UpsellOrders />
           </TabPanel>
           <TabPanel value="request">
-            <UpsellRequest/>
+            <UpsellRequest setSelectedTab={setSelectedTab} selectedTab={selectedTab}/>
           </TabPanel>
         </TabsBody>
       </Tabs>
