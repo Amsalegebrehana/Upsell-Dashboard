@@ -6,7 +6,7 @@ import SignIn from './pages/Authentication/SignIn';
 import SignUp from './pages/Authentication/SignUp';
 import Loader from './common/Loader';
 import routes from './routes';
-import Tables from './pages/Tables';
+import Upsell from './pages/Upsell';
 import { CreateUpsell } from './components/CreateUpsell';
 
 const DefaultLayout = lazy(() => import('./layout/DefaultLayout'));
@@ -32,7 +32,7 @@ function App() {
         <Route path="/auth/signup" element={<SignUp />} />
         <Route path="/upsell/add" element={<CreateUpsell/>} />
         <Route element={<DefaultLayout />}>
-          <Route index element={<Tables />} />
+          <Route index element={<Upsell />} />
           {routes.map((routes, index) => {
             const { path, component: Component } = routes;
             return (

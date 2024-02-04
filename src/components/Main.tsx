@@ -6,10 +6,10 @@ import UpsellModal from './UpsellModal';
 import ExportButton from "./ExportButton";
 import CreateButton from "./CreateButton";
 
-interface BreadcrumbProps {
+interface MainProps {
   pageName: string;
 }
-const Breadcrumb = ({  }: BreadcrumbProps) => {
+const Main = ({  }: MainProps) => {
   const [selectedTab, setSelectedTab] = useState("manage");
   const [showModal, setShowModal] = useState(false);
 
@@ -44,4 +44,4 @@ const Breadcrumb = ({  }: BreadcrumbProps) => {
   );
 };
 
-export default Breadcrumb;
+export default Main;
