@@ -1,4 +1,4 @@
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useState } from "react";
 import TableThree from "./TableThree";
 import TableOne from "./TableOne";
@@ -178,7 +178,7 @@ const Breadcrumb = ({  }: BreadcrumbProps) => {
                             <Typography variant="h6" color="gray" className="mb-1">
                               Build your own Upsell
                             </Typography>
-                            <a href="#" className="inline-block">
+                            <Link to="/upsell/add" className="inline-block">
                               <Button variant="text" className="flex gap-2 px-0">
                                 Start from blank
                                 <svg
@@ -196,7 +196,7 @@ const Breadcrumb = ({  }: BreadcrumbProps) => {
                                   />
                                 </svg>
                               </Button>
-                            </a>
+                            </Link>
                           </CardBody>
                         </Card>
                         <h5 className="text-l font-semibold mt-3">Upsell Templates</h5>
