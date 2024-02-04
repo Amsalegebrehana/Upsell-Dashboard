@@ -19,13 +19,13 @@ export function UpsellRequest({selectedTab, setSelectedTab} : {selectedTab: stri
     <Tabs value="dashboard" style={{marginTop: "30px"}}>
       <TabsHeader className="ml-3 mr-3 !dark:text-black">
         <Tab value="dashboard">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2" style={{position: "relative", zIndex: 1}}>
             <CheckCircleIcon className="w-5 h-5" />
             Pending
           </div>
         </Tab>
         <Tab value="profile">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2" style={{position: "relative", zIndex: 1}}>
             <XCircleIcon className="w-5 h-5" />
             Declined
           </div>
